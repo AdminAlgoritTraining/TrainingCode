@@ -41,17 +41,6 @@ app.get('/', (req, res) => {
     res.json({ message: 'API de Rutinas de Ejercicios Diarios 2' });
 });
 
-// Agrega este middleware después de las rutas
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', frontendUrl);
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    if (req.method === 'OPTIONS') {
-        return res.sendStatus(204);
-    }
-    next();
-});
-
 // 404 handler
 app.use((req, res) => {
     res.status(404).json({
