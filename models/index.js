@@ -7,7 +7,7 @@ const Category = require('./category');
 const Exercise = require('./exercise');
 const UserProgress = require('./userprogress');
 const Badge = require('./badge');
-const UserBadge = require('./userBadge');
+const UserBadge = require('./userbadge');
 const Group = require('./group');
 
 // Initialize models
